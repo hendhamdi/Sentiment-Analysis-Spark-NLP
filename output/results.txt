@@ -1,0 +1,7 @@
+Accuracy: 0.85
+Exemples de prédictions :
+Texte:  I just KNOW it"""... => Sentiment prédit: 0
+Texte:  bubbles and Vitamin C"""... => Sentiment prédit: 0
+Texte:  but made from 100% juice!"... => Sentiment prédit: 0
+Texte:  easy to prepare"... => Sentiment prédit: 0
+Texte:  only way better!"... => Sentiment prédit: 0
