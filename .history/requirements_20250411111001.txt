@@ -1,4 +1,0 @@
-pyspark
-matplotlib
-pandas
-numpy
