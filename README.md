@@ -26,4 +26,4 @@ Une visualisation des résultats est également générée, illustrant la répar
 
 - Précision du modèle : 85 %
 - Visualisation des résultats sous forme de graphique (voir `results.png`) montrant la répartition des prédictions :
-![Répartition des sentiments](results.png)
+![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis---Spark-NLP/blob/main/output/results.png)

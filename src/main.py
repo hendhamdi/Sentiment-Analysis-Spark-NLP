@@ -80,4 +80,3 @@ plt.show()
 
 print(f"✅ Analyse terminée. Précision: {accuracy:.2f}")
 spark.stop()
-model.write().overwrite().save("output/model")
