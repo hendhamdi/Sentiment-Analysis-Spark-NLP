@@ -20,6 +20,7 @@ Une visualisation des résultats est également générée, illustrant la répar
 
 ## 📂 Structure du Projet
 
+```plaintext
 sentiment-analysis-spark/
 ├── data/                  # Données brutes
 |   └── Reviews.csv        # Dataset
