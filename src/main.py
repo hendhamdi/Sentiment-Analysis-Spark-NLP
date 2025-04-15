@@ -58,7 +58,6 @@ accuracy = evaluator.evaluate(predictions)
 # 11 Table pour affichage
 table = PrettyTable()
 table.field_names = ["📝 Texte (extrait)", "🎯 Sentiment réel", "🤖 Prédiction"]
-
 rows = predictions.select("Text", "Sentiment", "prediction").take(15)
 for row in rows:
     texte = row.Text[:60].replace("\n", " ") + "..."
@@ -79,6 +78,7 @@ with open("output/results.txt", "w", encoding="utf-8") as f:
 
 # 12. Graphe
 # Compter les sentiments
+
 sentiment_counts = predictions.groupBy("Sentiment").count().collect()
 sentiment_map = {"negative": 0, "neutral": 0, "positive": 0}
 for row in sentiment_counts:
@@ -102,6 +102,7 @@ plt.show()
 
 train_percentage = 0.8 * 100
 test_percentage = 0.2 * 100
+
 print(f"\n✅ Analyse terminée")
 print(f"- Données d'entraînement : {training.count()} exemples")
 print(f"- Données de test        : {test.count()} exemples")
