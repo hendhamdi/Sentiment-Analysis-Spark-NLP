@@ -18,6 +18,18 @@ Une visualisation des résultats est également générée, illustrant la répar
   - `matplotlib`
 
 
+## 📂 Structure du Projet
+
+sentiment-analysis-spark/
+├── data/                  # Données brutes
+|   └── Reviews.csv        # Dataset
+├── src/                   # Scripts principaux
+│   └── main.py            # Script d'analyse des sentiments
+├── output/                # Résultats générés
+│   ├── results.txt        # tableau de prédictions
+│   └── results.png        # Graphique de répartition des sentiments
+└── README.md              
+
 
 
 ## 📊 Résultats
