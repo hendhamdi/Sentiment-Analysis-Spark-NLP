@@ -29,7 +29,8 @@ sentiment-analysis-spark/
 ├── output/                # Résultats générés
 │   ├── results.txt        # tableau de prédictions
 │   └── results.png        # Graphique de répartition des sentiments
-└── README.md              
+└── README.md    
+ ``` 
 
 
 
