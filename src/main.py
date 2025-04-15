@@ -6,6 +6,8 @@ from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 import matplotlib.pyplot as plt
 from pyspark import SparkConf, SparkContext
+from prettytable import PrettyTable
+
 
 # Configuration Spark
 conf = SparkConf().setAppName("SentimentAnalysis").setMaster("local[*]") \
@@ -43,7 +45,7 @@ lr = LogisticRegression(maxIter=10, regParam=0.001)
 pipeline = Pipeline(stages=[indexer, tokenizer, remover, hashingTF, idf, lr])
 
 # 8. Split données
-(training, test) = df.randomSplit([0.8, 0.2], seed=42)
+(training, test) = df.randomSplit([0.8, 0.2])
 
 # 9. Entraînement
 model = pipeline.fit(training)
@@ -53,12 +55,27 @@ predictions = model.transform(test)
 evaluator = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="accuracy")
 accuracy = evaluator.evaluate(predictions)
 
-# 11. Sauvegarde résultats
+# 11 Table pour affichage
+table = PrettyTable()
+table.field_names = ["📝 Texte (extrait)", "🎯 Sentiment réel", "🤖 Prédiction"]
+
+rows = predictions.select("Text", "Sentiment", "prediction").take(15)
+for row in rows:
+    texte = row.Text[:60].replace("\n", " ") + "..."
+    sentiment = row.Sentiment
+    prediction = int(row.prediction)
+    table.add_row([texte, sentiment, prediction])
+
+print("\n📊 Exemples de prédictions :")
+print(table)
+
+
+# Sauvegarder la précision et la table dans results.txt
 with open("output/results.txt", "w", encoding="utf-8") as f:
-    f.write(f"Accuracy: {accuracy:.2f}\n")
-    f.write("Exemples de prédictions :\n")
-    for row in predictions.select("Text", "Sentiment", "prediction").take(5):
-        f.write(f"Texte: {row.Text[:100]}... => Sentiment prédit: {int(row.prediction)}\n")
+    f.write(f"✅ Précision du modèle : {accuracy:.2f}\n\n")
+    f.write("📊 Exemples de prédictions :\n")
+    f.write(str(table))
+
 
 # 12. Graphe
 # Compter les sentiments
@@ -70,6 +87,11 @@ for row in sentiment_counts:
 labels = ["Négatif", "Neutre", "Positif"]
 values = [sentiment_map["negative"], sentiment_map["neutral"], sentiment_map["positive"]]
 
+
+# Ajouter les valeurs au-dessus des barres
+for i, v in enumerate(values):
+    plt.text(i, v + max(values)*0.01, str(v), ha='center')
+
 plt.bar(labels, values, color=["red", "gray", "green"])
 plt.title("Répartition des sentiments")
 plt.xlabel("Sentiment")
@@ -78,5 +100,13 @@ plt.tight_layout()
 plt.savefig("output/results.png")
 plt.show()
 
-print(f"✅ Analyse terminée. Précision: {accuracy:.2f}")
+train_percentage = 0.8 * 100
+test_percentage = 0.2 * 100
+print(f"\n✅ Analyse terminée")
+print(f"- Données d'entraînement : {training.count()} exemples")
+print(f"- Données de test        : {test.count()} exemples")
+print(f"- Précision du modèle    : {accuracy:.2f}")
+print("- Graphique sauvegardé dans : output/results.png")
+print("- Résultats texte dans     : output/results.txt")
+
 spark.stop()
