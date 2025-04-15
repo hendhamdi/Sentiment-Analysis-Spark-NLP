@@ -23,6 +23,7 @@ Une visualisation des résultats est également générée, illustrant la répar
 ## 📊 Résultats
 
 - Le modèle entraîné atteint 85% de précision sur les données de test.
+- Visualisation des résultats sous forme de tableau (voir `results.text`) montrant des exemples de prédictions.
 - Visualisation des résultats sous forme de graphique (voir `results.png`) montrant la répartition des prédictions :
 
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis---Spark-NLP/blob/main/output/results.png)

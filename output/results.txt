@@ -1,7 +1,22 @@
-Accuracy: 0.85
-Exemples de prédictions :
-Texte:  I just KNOW it"""... => Sentiment prédit: 0
-Texte:  bubbles and Vitamin C"""... => Sentiment prédit: 0
-Texte:  but made from 100% juice!"... => Sentiment prédit: 0
-Texte:  easy to prepare"... => Sentiment prédit: 0
-Texte:  only way better!"... => Sentiment prédit: 0
+✅ Précision du modèle : 0.85
+
+📊 Exemples de prédictions :
++-----------------------------------------------------------------+-------------------+---------------+
+|                        📝 Texte (extrait)                       | 🎯 Sentiment réel | 🤖 Prédiction |
++-----------------------------------------------------------------+-------------------+---------------+
+|                 its more like a Jaw-breaker!"...                |      negative     |       0       |
+|                              no?"...                            |      positive     |       0       |
+|                             smooth...                           |      positive     |       0       |
+|                  special treat for manga fans...                |      positive     |       0       |
+|          this is the kind of thing you will like."""...         |      positive     |       0       |
+|                         "" I guess.."...                        |      positive     |       0       |
+|                        """At Spectrum...                        |      negative     |       0       |
+|                    """Blue Diamond Almonds...                   |      positive     |       0       |
+|  """Bottom Line Up Top"":  While individual tastes may vary...  |      positive     |       0       |
+|            """Cherry Pie"" is certainly a misnomer...           |      neutral      |       0       |
+| """I love them""<br /><br />  - Winston the dog<br /><br />"... |      positive     |       0       |
+|         """Lipton To Go Stix Decaf Iced Green Tea Mix...        |      positive     |       0       |
+|                       """Navratan Korma...                      |      positive     |       0       |
+| """Nong Shim Spicy Chicken Noodle Bowl"" was another Amazon ... |      positive     |       0       |
+|                         """Pav Bhaji...                         |      positive     |       0       |
++-----------------------------------------------------------------+-------------------+---------------+
