@@ -78,7 +78,6 @@ with open("output/results.txt", "w", encoding="utf-8") as f:
 
 # 12. Graphe
 # Compter les sentiments
-
 sentiment_counts = predictions.groupBy("Sentiment").count().collect()
 sentiment_map = {"negative": 0, "neutral": 0, "positive": 0}
 for row in sentiment_counts:
