@@ -4,19 +4,19 @@
 +-----------------------------------------------------------------+-------------------+---------------+
 |                        📝 Texte (extrait)                       | 🎯 Sentiment réel | 🤖 Prédiction |
 +-----------------------------------------------------------------+-------------------+---------------+
-|                      drugstore chocolate...                     |      positive     |       0       |
+|                       I just KNOW it"""...                      |      positive     |       0       |
+|                          Pleez-e!"""...                         |      positive     |       0       |
+|                     and NOT A DIET DRINK!"...                   |      neutral      |       0       |
+|             but Orange Flavor is a ""NO"" for me"...            |      negative     |       0       |
+|                              no?"...                            |      positive     |       0       |
+|                  not for a non-ginger lover"...                 |      negative     |       0       |
 |                           please!"""...                         |      positive     |       0       |
-|                             smooth...                           |      positive     |       0       |
-|                  special treat for manga fans...                |      positive     |       0       |
+|          this is the kind of thing you will like."""...         |      positive     |       0       |
 |                    those are beautiful!"""...                   |      positive     |       0       |
-|  to the point of being almost crumbly in your mouth. I also ... |      negative     |       1       |
-|                         "" I guess.."...                        |      positive     |       0       |
-| """Boylan Bottleworks""<br /><br />AS a charter member of ""... |      positive     |       1       |
-|          """Chocolate without guilt"" is a good idea...         |      neutral      |       0       |
+|        "" but maybe not the most refined experience?"...        |      neutral      |       0       |
+| """And God gave man this ineffable substance from His own te... |      positive     |       0       |
+|              """Bounty"" bars consist of a soft...              |      positive     |       0       |
+|              """Bounty"" bars consist of a soft...              |      positive     |       0       |
+|                     """Corn Syrup Solids...                     |      positive     |       0       |
 | """Erythritol"" has become our sugar substitute of choice si... |      positive     |       0       |
-|                  """February made me shiver...                  |      neutral      |       0       |
-|                 """GREAT taste"". Great taste...                |      positive     |       0       |
-| """Green Tea with Pomegranate and Acai"" seems more like an ... |      negative     |       0       |
-| """I received a free sample of 5-Hour ENERGY® from Smiley360... |      positive     |       0       |
-| """Ingredients:<br />100% natural coconut water from concent... |      negative     |       0       |
 +-----------------------------------------------------------------+-------------------+---------------+

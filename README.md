@@ -46,4 +46,5 @@ sentiment-analysis-spark/
 Intégrer une interface utilisateur web permettant aux utilisateurs de :
 
 - Visualiser dynamiquement les résultats sous forme de graphiques interactifs.
-- Saisir un avis directement depuis une page web et obtenir instantanément la prédiction du sentiment (positif, neutre ou négatif).
+- Saisir un avis directement depuis une page web et obtenir instantanément la prédiction du sentiment (positif, neutre ou négatif).import logging
+
