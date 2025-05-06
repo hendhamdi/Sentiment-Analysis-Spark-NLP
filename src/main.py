@@ -9,63 +9,49 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark import SparkConf, SparkContext
 from prettytable import PrettyTable
 
-# Configuration Spark
 conf = SparkConf().setAppName("SentimentAnalysisMP2L").setMaster("local[*]") \
     .set("spark.executor.memory", "4g") \
     .set("spark.driver.memory", "4g")
 sc = SparkContext(conf=conf)
 
-# SparkSession
 spark = SparkSession.builder.appName("SentimentAnalysisMP2L").getOrCreate()
 
-# Charger les données
 df = spark.read.csv("data/avis_etudiants_dataset.csv", header=True, inferSchema=True)
 df = df.select("Text", "Matière", "Semestre").na.drop()
 
-# Créer la colonne Sentiment
 df = df.withColumn("Sentiment",
     when(lower(col("Text")).rlike(".*(pas|nul|difficile|compliqué|mauvais|incompréhensible).*"), "negative")
     .when(lower(col("Text")).rlike(".*(bon|utile|clair|intéressant|super|excellent|parfait|facile|bien|génial).*"), "positive")
     .otherwise("neutral")
 )
 
-# Réduction des neutres → plus de positifs
 df = df.withColumn("Sentiment", 
     when((col("Sentiment") == "neutral") & (rand() < 0.9), "positive")  # 90% des neutres deviennent positifs
     .otherwise(col("Sentiment"))
 )
 
-# Indexation du label
 indexer = StringIndexer(inputCol="Sentiment", outputCol="label")
 
-# Pipeline NLP
 tokenizer = Tokenizer(inputCol="Text", outputCol="words")
 remover = StopWordsRemover(inputCol="words", outputCol="filtered")
 hashingTF = HashingTF(inputCol="filtered", outputCol="rawFeatures", numFeatures=10000)
 idf = IDF(inputCol="rawFeatures", outputCol="features")
 
-# Modèle
 lr = LogisticRegression(maxIter=10, regParam=0.001)
 pipeline = Pipeline(stages=[indexer, tokenizer, remover, hashingTF, idf, lr])
 
-# Split
 training, test = df.randomSplit([0.7, 0.3])
 
-# Entraînement
 model = pipeline.fit(training)
 
-# Prédictions
 predictions = model.transform(test)
 
-# Évaluation
 evaluator = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="accuracy")
 accuracy = evaluator.evaluate(predictions)
 
-# Table d'exemples
 table = PrettyTable()
 table.field_names = ["📝 Avis", "🎯 Réel", "🤖 Prédit"]
 
-# Récupérer le mapping des étiquettes
 labels_mapping = indexer.fit(df).labels
 labels_dict = {i: label for i, label in enumerate(labels_mapping)}
 
@@ -79,13 +65,11 @@ for row in rows:
 print("\n📊 Exemples de prédictions :")
 print(table)
 
-# Analyse globale
 sentiment_counts = predictions.groupBy("Sentiment").count().collect()
 sentiment_map = {"negative": 0, "neutral": 0, "positive": 0}
 for row in sentiment_counts:
     sentiment_map[row["Sentiment"]] = row["count"]
 
-# Graphique
 labels = ["Négatif", "Neutre", "Positif"]
 values = [sentiment_map["negative"], sentiment_map["neutral"], sentiment_map["positive"]]
 
@@ -97,13 +81,12 @@ plt.ylabel("Nombre d'avis")
 plt.savefig('output/results.png')
 plt.show()
 
-# Résumé
 print(f"\n✅ Analyse terminée")
 print(f"- Données d'entraînement : {training.count()} exemples")
 print(f"- Données de test : {test.count()} exemples")
 print(f"- Précision du modèle : {accuracy:.2f}")
 
-# Fonction pour interface web
+# interface web
 def get_analysis_results():
     return {
         "accuracy": accuracy,

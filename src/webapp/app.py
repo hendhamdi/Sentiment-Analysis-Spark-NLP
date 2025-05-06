@@ -3,14 +3,12 @@ import os
 import sys
 from pathlib import Path
 
-# Configuration des chemins
 current_dir = Path(__file__).parent
 project_root = current_dir.parent.parent
 sys.path.append(str(project_root))
 
 app = Flask(__name__)
 
-# Chemins vers les fichiers
 OUTPUT_FOLDER = project_root / 'output'
 RESULTS_FILE = OUTPUT_FOLDER / 'results.txt'
 GRAPH_FILE = 'results.png'
@@ -26,11 +24,9 @@ def load_analysis_results():
 
 @app.route("/")
 def index():
-    # Charge les résultats directement depuis Spark
     results = load_analysis_results()
     
     if results is None:
-        # Fallback: lit depuis les fichiers
         try:
             with open(RESULTS_FILE, 'r', encoding='utf-8') as f:
                 table_data = f.read()

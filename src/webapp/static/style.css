@@ -1,6 +1,4 @@
-/* src/webapp/static/style.css */
 
-/* Reset et base */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +13,6 @@ body {
     margin: 0;
 }
 
-/* Barre de navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -49,14 +46,12 @@ body {
     height: 60px;
 }
 
-/* Conteneur principal */
 .container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 2rem;
 }
 
-/* En-tête */
 .header {
     text-align: center;
     margin-bottom: 2rem;
@@ -73,7 +68,6 @@ h1{
 text-align: center;
 color: #1e1b63;}
 
-/* Cartes de métriques */
 .metrics-card {
     background: white;
     border-radius: 8px;
@@ -101,7 +95,6 @@ color: #1e1b63;}
     margin-bottom: 1rem;
 }
 
-/* Graphique */
 .chart-container {
     background: white;
     padding: 1.5rem;
@@ -117,7 +110,6 @@ color: #1e1b63;}
     border-radius: 4px;
 }
 
-/* Résultats */
 .results-container {
     background: white;
     border-radius: 8px;
@@ -144,7 +136,6 @@ pre {
     white-space: pre-wrap;
 }
 
-/* Exemples */
 .examples-container {
     margin: 2rem 0;
 }
@@ -184,7 +175,6 @@ pre {
     color: #2c3e50;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -207,7 +197,6 @@ pre {
     }
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
