@@ -1,22 +1,19 @@
-✅ Précision du modèle : 0.85
-
-📊 Exemples de prédictions :
-+-----------------------------------------------------------------+-------------------+---------------+
-|                        📝 Texte (extrait)                       | 🎯 Sentiment réel | 🤖 Prédiction |
-+-----------------------------------------------------------------+-------------------+---------------+
-|                       I just KNOW it"""...                      |      positive     |       0       |
-|                          Pleez-e!"""...                         |      positive     |       0       |
-|                     and NOT A DIET DRINK!"...                   |      neutral      |       0       |
-|             but Orange Flavor is a ""NO"" for me"...            |      negative     |       0       |
-|                              no?"...                            |      positive     |       0       |
-|                  not for a non-ginger lover"...                 |      negative     |       0       |
-|                           please!"""...                         |      positive     |       0       |
-|          this is the kind of thing you will like."""...         |      positive     |       0       |
-|                    those are beautiful!"""...                   |      positive     |       0       |
-|        "" but maybe not the most refined experience?"...        |      neutral      |       0       |
-| """And God gave man this ineffable substance from His own te... |      positive     |       0       |
-|              """Bounty"" bars consist of a soft...              |      positive     |       0       |
-|              """Bounty"" bars consist of a soft...              |      positive     |       0       |
-|                     """Corn Syrup Solids...                     |      positive     |       0       |
-| """Erythritol"" has become our sugar substitute of choice si... |      positive     |       0       |
-+-----------------------------------------------------------------+-------------------+---------------+
++------------------------------------------+----------+-----------+
+|                📝 Review                 | 🎯 Réel  | 🤖 Prédit |
++------------------------------------------+----------+-----------+
+| Bon support mais rythme un peu lent....  | positive |     2     |
+| Bon support mais rythme un peu lent....  | positive |     2     |
+| Bon support mais rythme un peu lent....  | positive |     2     |
+| Contenu acceptable mais parfois flou.... | neutral  |     0     |
+| Contenu acceptable mais parfois flou.... | neutral  |     0     |
+| Contenu acceptable mais parfois flou.... | neutral  |     0     |
+| Contenu acceptable mais parfois flou.... | neutral  |     0     |
+| Contenu acceptable mais parfois flou.... | neutral  |     0     |
+| Contenu acceptable mais parfois flou.... | neutral  |     0     |
+|  Cours interactif et bien structuré....  | neutral  |     0     |
+|  Cours interactif et bien structuré....  | neutral  |     0     |
+|  Cours interactif et bien structuré....  | neutral  |     0     |
+|  Cours interactif et bien structuré....  | neutral  |     0     |
+|  Cours interactif et bien structuré....  | neutral  |     0     |
+|  Excellent cours, très enrichissant....  | neutral  |     0     |
++------------------------------------------+----------+-----------+

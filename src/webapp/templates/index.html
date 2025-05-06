@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats d'Analyse de Sentiments</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ 
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="{{ url_for('serve_image', filename='isi_logo.png') }}" alt="Logo UVT" class="logo_uvt">
+            <span class="platformename">StudentFeedback</span>
+        </div>
+        <div class="navbar-right">
+            <span></span>
+            <img src="{{ url_for('serve_image', filename='uvt_logo.png') }}" alt="Logo ISI Ariana" class="logo_isi">
+           
+        </div>
+    </div>
+
+    <h1>Analyse des avis des étudiants Master MP2L</h1>
+
+    <div class="metrics">
+        <h2>📊 Métriques globales</h2>
+        <p>Précision du modèle: <strong>{{ accuracy }}%</strong></p>
+        <img src="{{ url_for('show_graph') }}" alt="Graphique des sentiments" width="600">
+    </div>
+
+    <div class="results">
+        <h2>📋 Détails des prédictions</h2>
+        <pre>{{ predictions }}</pre>
+    </div>
+
+    <div class="examples">
+        <h2>🖊️ Exemples d'analyses</h2>
+        {% for example in examples %}
+        <div class="example {{ example.sentiment }}">
+            <p><strong>Avis:</strong> {{ example.text }}</p>
+            <p><strong>Sentiment détecté:</strong> {{ example.sentiment }} (prédiction: {{ example.prediction }})</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

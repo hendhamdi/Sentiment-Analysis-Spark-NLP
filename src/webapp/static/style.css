@@ -1,0 +1,227 @@
+/* src/webapp/static/style.css */
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    height: 100px;
+    text-align: center;
+    /*background: linear-gradient(135deg, #e88989,#2c3e50);*/
+    background-color:rgb(233, 237, 245);
+    color: #2c3e50;
+    box-shadow: 0 2px 10px rgba(67, 48, 239, 0.1);
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:#362cf0
+}
+
+.logo_isi{
+    height: 85px;
+}
+.logo_uvt {
+    height: 60px;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* En-tête */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.header h1 {
+   margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
+h1{
+    margin-top: 50px;
+text-align: center;
+color: #1e1b63;}
+
+/* Cartes de métriques */
+.metrics-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.metrics-card h2 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.accuracy-badge {
+    background: #2ecc71;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Graphique */
+.chart-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.chart-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Résultats */
+.results-container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.results-container h2 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+}
+
+/* Exemples */
+.examples-container {
+    margin: 2rem 0;
+}
+
+.example-card {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: transform 0.2s;
+}
+
+.example-card:hover {
+    transform: translateY(-2px);
+}
+
+.example-card.negative {
+    border-color: #e74c3c;
+    background: #fff5f5;
+}
+
+.example-card.neutral {
+    border-color: #95a5a6;
+    background: #f8f9fa;
+}
+
+.example-card.positive {
+    border-color: #2ecc71;
+    background: #ebfbee;
+}
+
+.example-card p {
+    margin-bottom: 0.5rem;
+}
+
+.example-card strong {
+    color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        margin: 0.5rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .metrics-card,
+    .results-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.metrics-card,
+.results-container,
+.examples-container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
