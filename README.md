@@ -1,9 +1,14 @@
 # 🧠 Analyse des Sentiments - Spark NLP
 
-Ce projet consiste à effectuer une **analyse de sentiments** sur des avis utilisateurs en utilisant un pipeline **Spark (PySpark)** combiné à un modèle de **régression logistique**.  
-Chaque avis est automatiquement classé comme **positif**, **neutre** ou **négatif** en fonction de son contenu textuel.  
-Une visualisation des résultats est également générée, illustrant la répartition des sentiments à l'aide d’un graphique.
 
+Ce projet effectue une **analyse de sentiments** sur les avis des étudiants du Master MP2L en utilisant **Apache Spark (PySpark)** avec un pipeline complet de NLP et un modèle de **régression logistique**.
+
+
+## 📌 Fonctionnalités
+
+- Classification automatique des avis en **positif**, **neutre** ou **négatif**
+- Génération de visualisations claires
+- Interface web intégrée pour explorer les résultats
 
 
 ## 🔧 Technologies utilisées
@@ -12,27 +17,49 @@ Une visualisation des résultats est également générée, illustrant la répar
 - **Apache Spark (PySpark)**: Framework de calcul distribué pour le traitement des données massives.
 - **Spark MLlib** : Librairie de machine learning incluse dans Spark pour la régression logistique.
 - **Hadoop** (configuration de `winutils.exe` nécessaire sous Windows)
+- **Flask** - Interface web
 - **Bibliothèques Python** :
   - `pyspark`
   - `pandas`
   - `matplotlib`
+  - `PrettyTable`|
 
 
 ## 📂 Structure du Projet
 
 ```plaintext
-sentiment-analysis-spark/
-├── data/                  # Données brutes
-|   └── Reviews.csv        # Dataset
-├── src/                   # Scripts principaux
-│   └── main.py            # Script d'analyse des sentiments
-├── output/                # Résultats générés
-│   ├── results.txt        # tableau de prédictions
-│   └── results.png        # Graphique de répartition des sentiments
-└── README.md    
+ssentiment-analysis-spark/
+├── data/
+│ └── avis_etudiants_dataset.csv # Dataset des avis
+├── src/
+│ ├── main.py # Script principal d'analyse
+│ └── webapp/ # Interface Flask
+│ ├── app.py
+│ ├── static/
+│ │ └── style.css
+│ ├── templates/
+│ │ └── index.html
+│ └── images/
+│ ├── uvt_logo.png
+│ └── isi_logo.png
+├── output/ # Résultats
+│ ├── results.txt # Prédictions détaillées
+│ └── results.png # Graphique des sentiments
+└── README.md
  ``` 
 
+## 🚀 Comment lancer le projet
 
+1. **Analyse des données**:
+
+```bash
+python src/main.py
+```
+2. **Interface web**:
+
+```bash
+python src/webapp/app.py
+```
 
 ## 📊 Résultats
 
@@ -43,6 +70,7 @@ sentiment-analysis-spark/
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis---Spark-NLP/blob/main/output/results.png)
 
 ## 🚀 Améliorations futures
+
 Intégrer une interface utilisateur web permettant aux utilisateurs de :
 
 - Visualiser dynamiquement les résultats sous forme de graphiques interactifs.
