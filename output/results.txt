@@ -1,19 +1,13 @@
-+------------------------------------------+----------+-----------+
-|                📝 Review                 | 🎯 Réel  | 🤖 Prédit |
-+------------------------------------------+----------+-----------+
-| Bon support mais rythme un peu lent....  | positive |     2     |
-| Bon support mais rythme un peu lent....  | positive |     2     |
-| Bon support mais rythme un peu lent....  | positive |     2     |
-| Contenu acceptable mais parfois flou.... | neutral  |     0     |
-| Contenu acceptable mais parfois flou.... | neutral  |     0     |
-| Contenu acceptable mais parfois flou.... | neutral  |     0     |
-| Contenu acceptable mais parfois flou.... | neutral  |     0     |
-| Contenu acceptable mais parfois flou.... | neutral  |     0     |
-| Contenu acceptable mais parfois flou.... | neutral  |     0     |
-|  Cours interactif et bien structuré....  | neutral  |     0     |
-|  Cours interactif et bien structuré....  | neutral  |     0     |
-|  Cours interactif et bien structuré....  | neutral  |     0     |
-|  Cours interactif et bien structuré....  | neutral  |     0     |
-|  Cours interactif et bien structuré....  | neutral  |     0     |
-|  Excellent cours, très enrichissant....  | neutral  |     0     |
-+------------------------------------------+----------+-----------+
+Précision du modèle : 0.78
+
+Exemples de prédictions :
+📝 Bon support mais rythme un peu lent.... | 🎯 Réel: 1 | 🤖 Prédit: 1
+📝 Bon support mais rythme un peu lent.... | 🎯 Réel: 0 | 🤖 Prédit: 1
+📝 Bon support mais rythme un peu lent.... | 🎯 Réel: 0 | 🤖 Prédit: 1
+📝 Bon support mais rythme un peu lent.... | 🎯 Réel: 1 | 🤖 Prédit: 1
+📝 Bon support mais rythme un peu lent.... | 🎯 Réel: 1 | 🤖 Prédit: 1
+📝 Bon support mais rythme un peu lent.... | 🎯 Réel: 0 | 🤖 Prédit: 1
+📝 Contenu acceptable mais parfois flou.... | 🎯 Réel: 1 | 🤖 Prédit: 1
+📝 Contenu acceptable mais parfois flou.... | 🎯 Réel: 1 | 🤖 Prédit: 1
+📝 Contenu acceptable mais parfois flou.... | 🎯 Réel: 1 | 🤖 Prédit: 1
+📝 Contenu acceptable mais parfois flou.... | 🎯 Réel: 1 | 🤖 Prédit: 1

@@ -1,6 +1,7 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, jsonify
 import os
 import sys
+import json
 from pathlib import Path
 
 current_dir = Path(__file__).parent
@@ -46,6 +47,15 @@ def index():
 @app.route("/graph")
 def show_graph():
     return send_from_directory(OUTPUT_FOLDER, GRAPH_FILE)
+
+@app.route("/data/sentiments")
+def sentiments_par_annee():
+    try:
+        with open(OUTPUT_FOLDER / "sentiments_par_annee.json", encoding="utf-8") as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": str(e)})
 
 @app.route('/images/<path:filename>')
 def serve_image(filename):

@@ -22,7 +22,7 @@ body {
     text-align: center;
     /*background: linear-gradient(135deg, #e88989,#2c3e50);*/
     background-color:rgb(233, 237, 245);
-    color: #2c3e50;
+    color: #f4f6f8;
     box-shadow: 0 2px 10px rgba(67, 48, 239, 0.1);
 }
 
@@ -56,8 +56,6 @@ body {
     text-align: center;
     margin-bottom: 2rem;
 }
-
-
 .header h1 {
    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -66,7 +64,7 @@ body {
 h1{
     margin-top: 50px;
 text-align: center;
-color: #1e1b63;}
+color: #030340}
 
 .metrics-card {
     background: white;
@@ -75,50 +73,11 @@ color: #1e1b63;}
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
-
+.metrics{
+        margin-top: 70px;
+        margin-left: 50px;
+}
 .metrics-card h2 {
-    color: #3498db;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.accuracy-badge {
-    background: #2ecc71;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-.chart-container {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.chart-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.results-container {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.results-container h2 {
     color: #3498db;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -136,44 +95,7 @@ pre {
     white-space: pre-wrap;
 }
 
-.examples-container {
-    margin: 2rem 0;
-}
 
-.example-card {
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border-radius: 8px;
-    border-left: 4px solid;
-    transition: transform 0.2s;
-}
-
-.example-card:hover {
-    transform: translateY(-2px);
-}
-
-.example-card.negative {
-    border-color: #e74c3c;
-    background: #fff5f5;
-}
-
-.example-card.neutral {
-    border-color: #95a5a6;
-    background: #f8f9fa;
-}
-
-.example-card.positive {
-    border-color: #2ecc71;
-    background: #ebfbee;
-}
-
-.example-card p {
-    margin-bottom: 0.5rem;
-}
-
-.example-card strong {
-    color: #2c3e50;
-}
 
 @media (max-width: 768px) {
     .navbar {
@@ -214,3 +136,83 @@ pre {
 .examples-container {
     animation: fadeIn 0.5s ease-out forwards;
 }
+.graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}.metrics-and-charts {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.metrics {
+    flex: 1;
+}
+
+.charts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}#charts-container canvas {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.chart-wrapper {
+    width: 220px;
+    text-align: center;
+}.button-group {
+    margin-bottom: 15px;
+}
+
+.year-btn {
+    padding: 8px 16px;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.year-btn:hover {
+    background-color: #e0e0e0;
+}
+
+#charts-container {
+    text-align: center;
+    margin-top: 20px;
+}
+ .button-group {
+     margin-bottom: 15px;
+ }
+
+ .year-btn {
+     padding: 8px 16px;
+     margin-right: 10px;
+     background-color: #f0f0f0;
+     border: 1px solid #ccc;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: bold;
+ }
+
+ .year-btn.active {
+     background-color: #007bff;
+     color: white;
+ }
+
+ .year-btn:hover {
+     background-color: #e0e0e0;
+ }
+
+ #charts-container {
+     text-align: center;
+     margin-top: 20px;
+ }
+ .annee{margin-left: 120px;}
+ .globale{margin-left: 155px;}

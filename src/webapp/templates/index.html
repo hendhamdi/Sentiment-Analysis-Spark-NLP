@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Résultats d'Analyse de Sentiments</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
- 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
 </head>
 
 <body>
@@ -15,18 +16,22 @@
             <span class="platformename">StudentFeedback</span>
         </div>
         <div class="navbar-right">
-            <span></span>
             <img src="{{ url_for('serve_image', filename='uvt_logo.png') }}" alt="Logo ISI Ariana" class="logo_isi">
-           
         </div>
     </div>
 
     <h1>Analyse des avis des étudiants Master MP2L</h1>
 
-    <div class="metrics">
-        <h2>📊 Métriques globales</h2>
-        <p>Précision du modèle: <strong>{{ accuracy }}%</strong></p>
-        <img src="{{ url_for('show_graph') }}" alt="Graphique des sentiments" width="600">
+    <div class="metrics" style="display: flex; gap: 50px;">
+        <div>
+            <h2 class="globale">📊 Métriques globales</h2>
+            <img src="{{ url_for('show_graph') }}" alt="Graphique des sentiments" width="600">
+        </div>
+        <div class="annee">
+            <h2>📈 Répartition par année</h2>
+            <div id="year-buttons" class="button-group"></div>
+            <div id="charts-container"></div>
+        </div>
     </div>
 
     <div class="results">
@@ -43,6 +48,84 @@
         </div>
         {% endfor %}
     </div>
+
+    <script>
+        fetch("/data/sentiments")
+            .then(response => response.json())
+            .then(data => {
+                const colors = {
+                    positive: "#362cf0",
+                    negative: "#3498db",
+                    neutral: "#8abee0"
+                };
+
+                const buttonContainer = document.getElementById("year-buttons");
+                const chartContainer = document.getElementById("charts-container");
+
+                let currentChart = null;
+
+                function renderChartForYear(annee) {
+                    chartContainer.innerHTML = '';
+
+                    const sentiments = data[annee];
+                    if (!sentiments) return;
+
+                    const canvas = document.createElement("canvas");
+                    canvas.width = 300;
+                    canvas.height = 300;
+                    chartContainer.appendChild(canvas);
+
+                    currentChart = new Chart(canvas.getContext("2d"), {
+                        type: 'pie',
+                        data: {
+                            labels: Object.keys(sentiments),
+                            datasets: [{
+                                data: Object.values(sentiments),
+                                backgroundColor: Object.keys(sentiments).map(s => colors[s] || "#999")
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: `Sentiments ${annee}`,
+                                    font: { size: 16 }
+                                },
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }
+                    });
+                }
+
+                function setActiveButton(selectedBtn) {
+                    const buttons = document.querySelectorAll(".year-btn");
+                    buttons.forEach(btn => btn.classList.remove("active"));
+                    selectedBtn.classList.add("active");
+                }
+
+                Object.keys(data).forEach((annee, index) => {
+                    const btn = document.createElement("button");
+                    btn.textContent = annee;
+                    btn.className = "year-btn";
+                    btn.onclick = () => {
+                        renderChartForYear(annee);
+                        setActiveButton(btn);
+                    };
+                    buttonContainer.appendChild(btn);
+
+                    // Par défaut, cliquer sur le premier bouton
+                    if (index === 0) {
+                        btn.click();
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Erreur de chargement des données:", error);
+            });
+    </script>
+
 </body>
 
 </html>
