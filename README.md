@@ -1,23 +1,23 @@
-# 🧠 Analyse des Sentiments - Spark NLP
+# 🧠 Analyse de Sentiments Étudiants - Spark NLP
 
+Ce projet réalise une **analyse de sentiments** sur des avis d'étudiants du Master MP2L, à l'aide d'un pipeline de traitement de texte basé sur **Apache Spark (PySpark)** et un modèle de **régression logistique**.
 
-Ce projet effectue une **analyse de sentiments** sur les avis des étudiants du Master MP2L en utilisant **Apache Spark (PySpark)** avec un pipeline complet de NLP et un modèle de **régression logistique**.
+---
 
+## 🚀 Objectifs
 
-## 📌 Fonctionnalités
-
-- Classification automatique des avis en **positif**, **neutre** ou **négatif**
-- Génération de visualisations claires
-- Interface web intégrée pour explorer les résultats
+- Automatiser la **classification des avis étudiants** (positif, neutre, négatif)
+- Visualiser la répartition des sentiments de manière globale et par année
+- Offrir une **interface web interactive** pour explorer les résultats dynamiquement
 
 
 ## 🔧 Technologies utilisées
 
 - **Python 3**:  Langage principal du projet.
 - **Apache Spark (PySpark)**: Framework de calcul distribué pour le traitement des données massives.
+- **Flask** - Interface web
 - **Spark MLlib** : Librairie de machine learning incluse dans Spark pour la régression logistique.
 - **Hadoop** (configuration de `winutils.exe` nécessaire sous Windows)
-- **Flask** - Interface web
 - **Bibliothèques Python** :
   - `pyspark`
   - `pandas`
@@ -28,7 +28,7 @@ Ce projet effectue une **analyse de sentiments** sur les avis des étudiants du 
 ## 📂 Structure du Projet
 
 ```plaintext
-ssentiment-analysis-spark/
+sentiment-analysis-spark/
 ├── data/
 │ └── avis_etudiants_dataset.csv # Dataset des avis
 ├── src/
@@ -44,7 +44,8 @@ ssentiment-analysis-spark/
 │ └── isi_logo.png
 ├── output/ # Résultats
 │ ├── results.txt # Prédictions détaillées
-│ └── results.png # Graphique des sentiments
+│ ├── results.png # Graphique des sentiments
+│ └── sentiments_par_annee.json # Données par année (pour l'interface)
 └── README.md
  ``` 
 
@@ -63,14 +64,24 @@ python src/webapp/app.py
 
 ## 📊 Résultats
 
-- Le modèle entraîné atteint 85% de précision sur les données de test.
-- Visualisation des résultats sous forme de tableau (voir `results.text`) montrant des exemples de prédictions.
-- Visualisation des résultats sous forme de graphique (voir `results.png`) montrant la répartition des prédictions :
+- Précision du modèle : ~99%
+- Prédictions (extrait) sauvegardées dans output/results.txt.
+- Graphique global des sentiments généré automatiquement :
 
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis---Spark-NLP/blob/main/output/results.png)
 
+- Répartition des sentiments par année : affichée sous forme de graphiques interactifs dans l'interface Flask.
+
+## 📈 Fonctionnalités de l'interface web
+
+- Visualisation globale de la répartition des sentiments
+- Graphiques interactifs par année
+- Affichage dynamique avec Chart.js
+- Navigation fluide et design épuré
+
+
 ## 🚀 Améliorations futures
 
-- Analyse thématique avancée
-- Système de recommandation pour améliorer l'expérience étudiante
+- Génération automatique de recommandations pédagogiques
+- Authentification pour permettre la personnalisation des résultats
 

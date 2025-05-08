@@ -34,27 +34,15 @@
         </div>
     </div>
 
-    <div class="results">
-        <h2>📋 Détails des prédictions</h2>
-        <pre>{{ predictions }}</pre>
-    </div>
-
-    <div class="examples">
-        <h2>🖊️ Exemples d'analyses</h2>
-        {% for example in examples %}
-        <div class="example {{ example.sentiment }}">
-            <p><strong>Avis:</strong> {{ example.text }}</p>
-            <p><strong>Sentiment détecté:</strong> {{ example.sentiment }} (prédiction: {{ example.prediction }})</p>
-        </div>
-        {% endfor %}
-    </div>
+   
+   
 
     <script>
         fetch("/data/sentiments")
             .then(response => response.json())
             .then(data => {
                 const colors = {
-                    positive: "#362cf0",
+                    positive: "#053971",
                     negative: "#3498db",
                     neutral: "#8abee0"
                 };

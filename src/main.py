@@ -90,7 +90,7 @@ labels = ["Négatif", "Neutre", "Positif"]
 values = [sentiment_map["negative"], sentiment_map["neutral"], sentiment_map["positive"]]
 
 plt.figure(figsize=(8, 5))
-plt.bar(labels, values, color=["#001f3f", "#0074D9", "#00BFFF"])
+plt.bar(labels, values, color=["#3498db", "#8abee0", "#053971"])
 plt.title("Répartition des sentiments (tous avis)")
 plt.xlabel("Sentiment")
 plt.ylabel("Nombre d'avis")
