@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.614), rgba(255, 255, 255, 0.9)),
+    background: linear-gradient(rgba(255, 255, 255, 0.685), rgba(255, 255, 255, 0.044)),
         url('https://i.pinimg.com/736x/df/47/69/df476900e249d7f117a2ffd1666b136b.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
@@ -22,7 +22,7 @@ body {
     align-items: center;
     padding: 1rem 2.5rem;
     height: 90px;
-    background-color: #b5d7ed;
+    background-color: #e3e6e8;
     box-shadow: 0 2px 10px rgba(67, 48, 239, 0.1);
 }
 
@@ -54,6 +54,7 @@ h1 {
     color: #2c3e50;
     font-size: 2rem;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* Conteneur principal */
@@ -77,7 +78,7 @@ h1 {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 580px;
 }
 
 .card:hover {
