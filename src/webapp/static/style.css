@@ -1,4 +1,3 @@
-/* Reset et base */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -47,7 +45,6 @@ body {
     height: 55px;
 }
 
-/* Titre principal */
 h1 {
     margin: 35px 0 25px;
     text-align: center;
@@ -57,7 +54,6 @@ h1 {
     margin-bottom: 50px;
 }
 
-/* Conteneur principal */
 .dashboard-container {
     display: flex;
     justify-content: center;
@@ -67,7 +63,6 @@ h1 {
     padding: 0 20px;
 }
 
-/* Cartes - Taille augmentée */
 .card {
     flex: 1;
     background: white;
@@ -108,7 +103,6 @@ h1 {
     flex-grow: 1;
 }
 
-/* Graphiques */
 .card-body img {
     max-width: 100%;
     height: auto;
@@ -121,7 +115,6 @@ h1 {
     height: 280px;
 }
 
-/* Boutons année */
 .year-buttons {
     display: flex;
     justify-content: center;
@@ -151,7 +144,6 @@ h1 {
     background-color: #e0e0e0;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .dashboard-container {
         flex-direction: column;
