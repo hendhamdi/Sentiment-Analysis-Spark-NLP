@@ -6,7 +6,6 @@
     <title>Résultats d'Analyse de Sentiments</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   
 </head>
 
 <body>
@@ -22,20 +21,26 @@
 
     <h1>Analyse des avis des étudiants Master MP2L</h1>
 
-    <div class="metrics" style="display: flex; gap: 50px;">
-        <div>
-            <h2 class="globale">📊 Métriques globales</h2>
-            <img src="{{ url_for('show_graph') }}" alt="Graphique des sentiments" width="600">
+    <div class="dashboard-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>📊 Métriques globales</h2>
+            </div>
+            <div class="card-body">
+                <img src="{{ url_for('show_graph') }}" alt="Graphique des sentiments">
+            </div>
         </div>
-        <div class="annee">
-            <h2>📈 Répartition par année</h2>
-            <div id="year-buttons" class="button-group"></div>
-            <div id="charts-container"></div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>📈 Répartition par année</h2>
+            </div>
+            <div class="card-body">
+                <div id="year-buttons" class="year-buttons"></div>
+                <div id="chart-container" class="chart-container"></div>
+            </div>
         </div>
     </div>
-
-   
-   
 
     <script>
         fetch("/data/sentiments")
@@ -47,8 +52,8 @@
                     neutral: "#8abee0"
                 };
 
-                const buttonContainer = document.getElementById("year-buttons");
-                const chartContainer = document.getElementById("charts-container");
+                const buttonContainer = document.querySelector(".year-buttons");
+                const chartContainer = document.querySelector(".chart-container");
 
                 let currentChart = null;
 
@@ -73,6 +78,8 @@
                             }]
                         },
                         options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
                             plugins: {
                                 title: {
                                     display: true,
@@ -103,7 +110,6 @@
                     };
                     buttonContainer.appendChild(btn);
 
-                    // Par défaut, cliquer sur le premier bouton
                     if (index === 0) {
                         btn.click();
                     }
@@ -113,7 +119,6 @@
                 console.error("Erreur de chargement des données:", error);
             });
     </script>
-
 </body>
 
 </html>
