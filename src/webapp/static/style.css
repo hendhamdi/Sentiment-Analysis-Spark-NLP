@@ -55,10 +55,10 @@ h1 {
 }
 
 .dashboard-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto 35px;
     padding: 0 20px;
 }
@@ -115,7 +115,19 @@ h1 {
     height: 280px;
 }
 
-.year-buttons {
+.centered-card {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+}
+
+.centered-card>.card {
+    width: 100%;
+    max-width: 800px;
+}
+
+.year-buttons,
+.semestre-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -123,7 +135,8 @@ h1 {
     flex-wrap: wrap;
 }
 
-.year-btn {
+.year-btn,
+.semestre-btn {
     padding: 7px 14px;
     font-size: 0.95rem;
     background-color: #f0f0f0;
@@ -134,27 +147,25 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.year-btn.active {
+.year-btn.active,
+.semestre-btn.active {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
 }
 
-.year-btn:hover {
+.year-btn:hover,
+.semestre-btn:hover {
     background-color: #e0e0e0;
 }
 
 @media (max-width: 1024px) {
     .dashboard-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        grid-template-columns: 1fr;
     }
 
-    .card {
-        width: 100%;
-        max-width: 550px;
-        margin-bottom: 25px;
+    .centered-card {
+        grid-column: 1;
     }
 }
 
@@ -201,44 +212,15 @@ h1 {
         height: 240px;
     }
 
-    .year-buttons {
+    .year-buttons,
+    .semestre-buttons {
         gap: 8px;
         margin-bottom: 15px;
     }
 
-    .year-btn {
+    .year-btn,
+    .semestre-btn {
         padding: 6px 12px;
         font-size: 0.85rem;
     }
-}
-.semestre-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.semestre-btn {
-    padding: 8px 15px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.semestre-btn:hover {
-    background-color: #e0e0e0;
-}
-
-.semestre-btn.active {
-    background-color: #3498db;
-    color: white;
-    border-color: #3498db;
-}
-
-.dashboard-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
 }

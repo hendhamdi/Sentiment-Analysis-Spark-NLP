@@ -14,7 +14,6 @@ OUTPUT_FOLDER = project_root / 'output'
 RESULTS_FILE = OUTPUT_FOLDER / 'results.txt'
 GRAPH_FILE = 'results.png'
 
-# Debug output paths
 print("\n=== Debug Information ===")
 print("Current directory:", current_dir)
 print("Project root:", project_root)
