@@ -40,6 +40,15 @@
                 <div id="chart-container" class="chart-container"></div>
             </div>
         </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>📈 Répartition par semestre</h2>
+            </div>
+            <div class="card-body">
+                <div id="semestre-buttons" class="semestre-buttons"></div>
+                <div id="semestre-chart-container" class="chart-container"></div>
+            </div>
+            </div>
     </div>
 
     <script>
@@ -118,6 +127,90 @@
             .catch(error => {
                 console.error("Erreur de chargement des données:", error);
             });
+            // Script pour les semestres
+                fetch("/data/sentiments_semestre")
+                    .then(response => response.json())
+                    .then(data => {
+                        const semestreColors = {
+                            positive: "#053971",
+                            negative: "#3498db",
+                            neutral: "#8abee0"
+                        };
+
+                        const semestreContainer = document.getElementById("semestre-buttons");
+                        const semestreChartContainer = document.getElementById("semestre-chart-container");
+
+                        let currentSemestreChart = null;
+
+                        function renderChartForSemestre(semestre) {
+                            semestreChartContainer.innerHTML = '';
+
+                            const sentiments = data[semestre];
+                            if (!sentiments) return;
+
+                            const canvas = document.createElement("canvas");
+                            canvas.width = 300;
+                            canvas.height = 300;
+                            semestreChartContainer.appendChild(canvas);
+
+                            currentSemestreChart = new Chart(canvas.getContext("2d"), {
+                                type: 'bar',
+                                data: {
+                                    labels: Object.keys(sentiments),
+                                    datasets: [{
+                                        label: 'Nombre d\'avis',
+                                        data: Object.values(sentiments),
+                                        backgroundColor: Object.keys(sentiments).map(s => semestreColors[s] || "#999"),
+                                        borderColor: Object.keys(sentiments).map(s => semestreColors[s] || "#999"),
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: `Sentiments S${semestre}`,
+                                            font: { size: 16 }
+                                        },
+                                        legend: {
+                                            display: false
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        }
+
+                        function setActiveSemestreButton(selectedBtn) {
+                            const buttons = document.querySelectorAll(".semestre-btn");
+                            buttons.forEach(btn => btn.classList.remove("active"));
+                            selectedBtn.classList.add("active");
+                        }
+
+                        Object.keys(data).forEach((semestre, index) => {
+                            const btn = document.createElement("button");
+                            btn.textContent = `S${semestre}`;
+                            btn.className = "semestre-btn";
+                            btn.onclick = () => {
+                                renderChartForSemestre(semestre);
+                                setActiveSemestreButton(btn);
+                            };
+                            semestreContainer.appendChild(btn);
+
+                            if (index === 0) {
+                                btn.click();
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Erreur de chargement des données semestre:", error);
+                    });
     </script>
 </body>
 

@@ -1,0 +1,17 @@
+{
+  "S2": {
+    "positive": 4,
+    "negative": 6,
+    "neutral": 12
+  },
+  "S3": {
+    "positive": 3,
+    "negative": 5,
+    "neutral": 18
+  },
+  "S1": {
+    "negative": 6,
+    "neutral": 11,
+    "positive": 10
+  }
+}

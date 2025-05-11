@@ -14,6 +14,14 @@ OUTPUT_FOLDER = project_root / 'output'
 RESULTS_FILE = OUTPUT_FOLDER / 'results.txt'
 GRAPH_FILE = 'results.png'
 
+# Debug output paths
+print("\n=== Debug Information ===")
+print("Current directory:", current_dir)
+print("Project root:", project_root)
+print("Output folder:", OUTPUT_FOLDER)
+print("Semestre file exists:", (OUTPUT_FOLDER / "sentiments_par_semestre.json").exists())
+print("=========================\n")
+
 def load_analysis_results():
     """Charge les résultats depuis main.py"""
     try:
@@ -55,7 +63,26 @@ def sentiments_par_annee():
             data = json.load(f)
         return jsonify(data)
     except Exception as e:
-        return jsonify({"error": str(e)})
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/data/sentiments_semestre")
+def sentiments_par_semestre():
+    semestre_file = OUTPUT_FOLDER / "sentiments_par_semestre.json"
+    if not semestre_file.exists():
+        return jsonify({
+            "error": "File not found",
+            "path": str(semestre_file),
+            "available_files": [f.name for f in OUTPUT_FOLDER.glob("*") if f.is_file()]
+        }), 404
+    
+    try:
+        with open(semestre_file, encoding="utf-8") as f:
+            data = json.load(f)
+        return jsonify(data)
+    except json.JSONDecodeError as e:
+        return jsonify({"error": "Invalid JSON", "details": str(e)}), 500
+    except Exception as e:
+        return jsonify({"error": str(e), "type": type(e).__name__}), 500
 
 @app.route('/images/<path:filename>')
 def serve_image(filename):

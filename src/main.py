@@ -118,5 +118,21 @@ with open(json_path, 'w', encoding='utf-8') as f:
 
 print(f"📄 Données par année enregistrées dans : {json_path}")
 
+
+# 📈 Regroupement des sentiments par semestre
+par_semestre = predictions.groupBy("Semestre", "Sentiment").count().collect()
+semestre_data = {}
+for row in par_semestre:
+    semestre = str(row["Semestre"])
+    sentiment = row["Sentiment"]
+    count = row["count"]
+    semestre_data.setdefault(semestre, {})[sentiment] = count
+
+# 💾 Sauvegarde en JSON
+json_semestre_path = OUTPUT_DIR / "sentiments_par_semestre.json"
+with open(json_semestre_path, 'w', encoding='utf-8') as f:
+    json.dump(semestre_data, f, ensure_ascii=False, indent=2)
+
+print(f"📄 Données par semestre enregistrées dans : {json_semestre_path}")
 # 🛑 Fermeture de Spark
 spark.stop()
