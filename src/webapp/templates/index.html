@@ -130,7 +130,6 @@
             .catch(error => {
                 console.error("Erreur de chargement des données:", error);
             });
-            // Script pour les semestres
                 fetch("/data/sentiments_semestre")
                     .then(response => response.json())
                     .then(data => {

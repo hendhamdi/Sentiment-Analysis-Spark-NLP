@@ -2,19 +2,19 @@
 +-----------------------------------------------------------------+----------+-----------+
 |                             📝 Avis                             | 🎯 Réel  | 🤖 Prédit |
 +-----------------------------------------------------------------+----------+-----------+
-|             Bon support mais rythme un peu lent....             | positive |  positive |
-|             Bon support mais rythme un peu lent....             | positive |  positive |
-|             Bon support mais rythme un peu lent....             | positive |  positive |
+| Approche méthodologique intéressante. Illustrer avec des out... | positive |  positive |
+| Approche technique solide. Intégrer des travaux pratiques av... | neutral  |  positive |
+| Bases techniques bien couvertes. Ajouter des labs sur simula... | positive |  positive |
+| Bonne introduction aux concepts clés. Des exemples de projet... | positive |  positive |
+| Ce cours représente un véritable atout pour comprendre les e... | neutral  |  neutral  |
+| Ce cours se distingue par sa capacité à couvrir l'ensemble d... | neutral  |  neutral  |
+| Ce cours se distingue par sa capacité à relier les fondament... | neutral  |  neutral  |
+| Ce cours se distingue par sa couverture exhaustive des bonne... | positive |  neutral  |
 | Ce module offre une approche pédagogique approfondie qui sti... | neutral  |  neutral  |
-| Ce module offre une approche pédagogique approfondie qui sti... | neutral  |  neutral  |
-| Cette matière permet d’acquérir une rigueur méthodologique e... | neutral  |  neutral  |
-| Cette matière permet d’acquérir une rigueur méthodologique e... | neutral  |  neutral  |
-| Chaque séance a apporté une réelle plus-value à ma compréhen... | neutral  |  neutral  |
+| Chaque session apporte une valeur ajoutée tangible, combinan... | neutral  |  neutral  |
 |             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
 |             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
-|             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
-|             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
-|             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
-|             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
-|              Cours interactif et bien structuré....             | positive |  positive |
+| Cours bien structuré couvrant les essentiels. Des démonstrat... | positive |  positive |
+|            Cours trop théorique, peu de pratique....            | neutral  |  neutral  |
+|            Cours trop théorique, peu de pratique....            | neutral  |  neutral  |
 +-----------------------------------------------------------------+----------+-----------+
