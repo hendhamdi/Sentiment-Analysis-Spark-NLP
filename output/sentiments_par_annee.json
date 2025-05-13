@@ -2,21 +2,21 @@
   "2023-2024": {
     "negative": 1,
     "neutral": 13,
-    "positive": 7
+    "positive": 8
   },
   "2022-2023": {
-    "neutral": 10,
-    "positive": 6,
+    "neutral": 17,
+    "positive": 3,
     "negative": 2
   },
   "2020-2021": {
-    "neutral": 2,
+    "neutral": 11,
     "positive": 4,
-    "negative": 3
+    "negative": 1
   },
   "2021-2022": {
-    "positive": 1,
-    "negative": 2,
-    "neutral": 8
+    "positive": 6,
+    "negative": 3,
+    "neutral": 7
   }
 }

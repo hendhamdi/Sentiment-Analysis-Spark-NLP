@@ -197,7 +197,7 @@
 
                         Object.keys(data).forEach((semestre, index) => {
                             const btn = document.createElement("button");
-                            btn.textContent = `S${semestre}`;
+                            btn.textContent = `${semestre}`;
                             btn.className = "semestre-btn";
                             btn.onclick = () => {
                                 renderChartForSemestre(semestre);
