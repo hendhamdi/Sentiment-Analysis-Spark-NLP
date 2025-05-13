@@ -2,19 +2,19 @@
 +-----------------------------------------------------------------+----------+-----------+
 |                             📝 Avis                             | 🎯 Réel  | 🤖 Prédit |
 +-----------------------------------------------------------------+----------+-----------+
+| Approche méthodologique intéressante. Illustrer avec des out... | positive |  positive |
 | Approche technique solide. Intégrer des travaux pratiques av... | neutral  |  positive |
-| Approche théorique bien structurée. Des démonstrations prati... | positive |  positive |
-| Bases linguistiques bien enseignées. Des mises en situation ... | positive |  neutral  |
-| Bonne couverture des fondamentaux. Intégrer des retours d'ex... | positive |  positive |
+| Bases techniques bien couvertes. Ajouter des labs sur simula... | positive |  positive |
 | Cadre conceptuel bien posé. Des exemples d'implémentation da... | positive |  positive |
-| Ce cours permet d'acquérir une rigueur conceptuelle exceptio... | neutral  |  neutral  |
+| Cadre juridique bien présenté. Analyser des cas réels de jur... | positive |  positive |
+| Ce cours excelle par sa capacité à couvrir à la fois les fon... | neutral  |  neutral  |
+| Ce cours représente un véritable atout pour comprendre les e... | neutral  |  neutral  |
+| Ce cours se distingue par sa couverture exhaustive des bonne... | positive |  neutral  |
 | Ce module offre une approche pédagogique approfondie qui sti... | neutral  |  neutral  |
-| Cette matière permet d’acquérir une rigueur méthodologique e... | neutral  |  neutral  |
-|             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
-|             Contenu acceptable mais parfois flou....            | neutral  |  neutral  |
-| Contenu technique très pertinent. Une approche plus interact... | neutral  |  positive |
-|            Cours trop théorique, peu de pratique....            | neutral  |  neutral  |
+| Chaque séance, soigneusement orchestrée, apporte non seuleme... | neutral  |  neutral  |
 |            Cours trop théorique, peu de pratique....            | neutral  |  neutral  |
 |             Difficile à suivre et mal structuré....             | negative |  negative |
 |             Difficile à suivre et mal structuré....             | negative |  negative |
+|             Difficile à suivre et mal structuré....             | negative |  negative |
+|              Excellent cours, très enrichissant....             | positive |  positive |
 +-----------------------------------------------------------------+----------+-----------+
