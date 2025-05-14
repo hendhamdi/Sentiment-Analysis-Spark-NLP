@@ -1,21 +1,27 @@
 {
-  "2022-2023": {
-    "neutral": 13,
-    "positive": 5,
-    "negative": 2
+  "2022": {
+    "positive": 9,
+    "negative": 5,
+    "neutral": 1
   },
-  "2023-2024": {
-    "neutral": 11,
-    "positive": 6
+  "2021": {
+    "neutral": 6,
+    "positive": 6,
+    "negative": 4
   },
-  "2020-2021": {
-    "neutral": 8,
-    "positive": 4,
-    "negative": 3
+  "2020": {
+    "negative": 1,
+    "positive": 9,
+    "neutral": 4
   },
-  "2021-2022": {
-    "positive": 8,
+  "2023": {
     "negative": 3,
-    "neutral": 6
+    "neutral": 3,
+    "positive": 11
+  },
+  "2024": {
+    "positive": 12,
+    "negative": 3,
+    "neutral": 4
   }
 }
