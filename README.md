@@ -27,8 +27,6 @@ Ce projet réalise une **analyse de sentiments** sur des avis d'étudiants du Ma
   - `pathlib`
 |
 
-
-
 ## 📂 Structure du Projet
 
 ```plaintext
