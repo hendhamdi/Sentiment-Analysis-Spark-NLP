@@ -84,6 +84,7 @@ python src/webapp/app.py
 - Affichage dynamique avec Chart.js
 - Navigation fluide et design épuré
 - Interface responsive et épurée
+![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis-Spark-NLP/blob/main/src/webapp/images/Interface-Web1.png)
 
 
 ## 🚀 Améliorations futures
