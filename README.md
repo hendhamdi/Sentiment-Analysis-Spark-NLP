@@ -85,6 +85,7 @@ python src/webapp/app.py
 - Navigation fluide et design épuré
 - Interface responsive et épurée
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis-Spark-NLP/blob/main/src/webapp/images/Interface-Web1.png)
+![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis-Spark-NLP/blob/main/src/webapp/images/Interface-Web2.png)
 
 
 ## 🚀 Améliorations futures
