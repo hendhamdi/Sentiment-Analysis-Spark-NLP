@@ -2,19 +2,19 @@
 +-----------------------------------------------------------------+----------+-----------+
 |                             📝 Avis                             | 🎯 Réel  | 🤖 Prédit |
 +-----------------------------------------------------------------+----------+-----------+
-| Bien que cette unité d'enseignement n'ait pas particulièreme... | negative |  negative |
-| Bien que cette unité n'ait pas particulièrement marqué les e... | negative |  negative |
 | Bien que l'approche théorique ait pu sembler prédominante, c... | positive |  negative |
-| Bien que l'architecture pédagogique initiale ait pu paraître... | positive |  neutral  |
-| Bonne matière, mais un peu trop théorique à mon goût. J’ai b... | positive |  positive |
+| Bonne matière, mais un peu trop théorique à mon goût. La str... | positive |  positive |
+| Bonne matière, mais un peu trop théorique à mon goût. Les pr... | positive |  positive |
 | Bonne matière, mais un peu trop théorique à mon goût. Les év... | positive |  positive |
-| Cette formation exceptionnelle a su allier richesse conceptu... | neutral  |  neutral  |
+| Cette formation exceptionnelle a su allier théorie fondament... | negative |  negative |
+| Cette formation passionnante s'est distinguée par sa richess... | negative |  neutral  |
+| Cette formation remarquable s'est distinguée par son approch... | neutral  |  neutral  |
+| Cette formation s'est distinguée par sa capacité à transmett... | neutral  |  neutral  |
 | Cette matière m'a vraiment passionné(e) et m'a beaucoup appr... | negative |  negative |
 | Cette matière m'a vraiment passionné(e) et m'a beaucoup appr... | negative |  negative |
-| Cette unité d'enseignement a su susciter un engagement intel... | positive |  positive |
-| Contenu acceptable, mais j’aurais préféré plus d’exemples co... | negative |  negative |
-| Contenu acceptable, mais j’aurais préféré plus d’exemples co... | positive |  positive |
-| Contenu acceptable, mais j’aurais préféré plus d’exemples co... | neutral  |  neutral  |
-| Contenu acceptable, mais j’aurais préféré plus d’exemples co... | neutral  |  neutral  |
-| Contenu acceptable, mais j’aurais préféré plus d’exemples co... | positive |  positive |
+| Cette matière m'a vraiment passionné(e) et m'a beaucoup appr... | negative |  negative |
+| Cette matière m'a vraiment passionné(e) et m'a beaucoup appr... | negative |  negative |
+| Cette matière m'a vraiment passionné(e) et m'a beaucoup appr... | negative |  negative |
+| Cette matière m'a vraiment passionné(e) et m'a beaucoup appr... | negative |  negative |
+| Cette unité d'enseignement s'est distinguée par sa capacité ... | positive |  positive |
 +-----------------------------------------------------------------+----------+-----------+
