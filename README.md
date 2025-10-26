@@ -1,6 +1,6 @@
-# 🧠 Analyse de Sentiments Étudiants - Spark NLP
+# 🧠 Student Sentiment Analysis - Spark NLP
 
-Ce projet réalise une **analyse de sentiments** sur des avis d'étudiants du Master MP2L, à l'aide d'un pipeline de traitement de texte basé sur **Apache Spark (PySpark)** et un modèle de **régression logistique**.
+This project performs **sentiment analysis** on reviews from MP2L Master’s students using a text-processing pipeline based on **Apache Spark (PySpark)** and a **logistic regression model**.
 
 ---
 
