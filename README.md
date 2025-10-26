@@ -4,20 +4,20 @@ This project performs **sentiment analysis** on reviews from MP2L Master’s stu
 
 ---
 
-## 🚀 Objectifs
+## 🚀 Objectives
 
-- Automatiser la **classification des avis étudiants** (positif, neutre, négatif)
-- Visualiser la répartition des sentiments de manière globale, par semestre et par année
-- Offrir une **interface web interactive** pour explorer les résultats dynamiquement
+- Automate the **classification of student reviews** (positive, neutral, negative)
+- Visualize the distribution of sentiments globally, by semester, and by year
+- Provide an **interactive web interface** to dynamically explore the results
 
 
-## 🔧 Technologies utilisées
+## 🔧 Technologies Used
 
-- **Python 3**:  Langage principal du projet.
-- **Apache Spark (PySpark)**: Framework de calcul distribué pour le traitement des données massives.
-- **Flask** - Interface web
-- **Spark MLlib** : Librairie de machine learning incluse dans Spark pour la régression logistique.
-- **Hadoop** (configuration de `winutils.exe` nécessaire sous Windows)
+- **Python 3**:  Main programming language
+- **Apache Spark (PySpark)**: Distributed computing framework for large-scale data processing
+- **Flask**: Web interface
+- **Spark MLlib** : Machine learning library in Spark used for logistic regression
+- **Hadoop** (requires `winutils.exe` configuration on Windows)
 - **Bibliothèques Python** :
   - `pyspark`
   - `pandas`
@@ -27,15 +27,15 @@ This project performs **sentiment analysis** on reviews from MP2L Master’s stu
   - `pathlib`
 |
 
-## 📂 Structure du Projet
+## 📂 Project Structure
 
 ```plaintext
 sentiment-analysis-spark/
 ├── data/
-│ └── avis_etudiants_dataset.csv    # Dataset des avis
+│ └── avis_etudiants_dataset.csv    # Student reviews dataset
 ├── src/
-│ ├── main.py                       # Script principal d'analyse
-│ └── webapp/                       # Interface Flask
+│ ├── main.py                       # Main analysis script
+│ └── webapp/                       # Flask interface
 │ ├── app.py
 │ ├── static/
 │ │ └── style.css
@@ -44,11 +44,11 @@ sentiment-analysis-spark/
 │ └── images/
 │ ├── uvt_logo.png
 │ └── isi_logo.png
-├── output/                          # Résultats
-│ ├── results.txt                    # Prédictions détaillées de 15 exemples
-│ ├── results.png                    # Graphique des sentiments
-│ ├── sentiments_par_annee.json      # Données par année (pour l'interface web)
-│ └── sentiments_par_semestre.json   # Données par semestre (pour l'interface web)
+├── output/                          # Results
+│ ├── results.txt                    # Detailed predictions for 15 samples
+│ ├── results.png                    # Sentiment distribution chart
+│ ├── sentiments_par_annee.json      # Data by year (for the web interface)
+│ └── sentiments_par_semestre.json   # Data by semester (for the web interface)
 └── README.md
  ``` 
 
