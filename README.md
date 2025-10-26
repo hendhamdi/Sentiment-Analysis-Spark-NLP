@@ -52,45 +52,45 @@ sentiment-analysis-spark/
 └── README.md
  ``` 
 
-## 🚀 Comment lancer le projet
+## 🚀 How to Run the Project
 
-1. **Analyse des données**:
+1. **Run the data analysis**:
 
 ```bash
 python src/main.py
 ```
-2. **Interface web**:
+2. **Launch the web interface**:
 
 ```bash
 python src/webapp/app.py
 ```
 
-## 📊 Résultats
+## 📊 Results
 
-- Précision du modèle : ~86%
-- Prédictions (extrait) sauvegardées dans output/results.txt.
-- Graphique global des sentiments généré automatiquement :
+- Model accuracy: ~86%
+- Predictions (sample) saved in output/results.txt
+- Global sentiment distribution chart automatically generated:
 
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis---Spark-NLP/blob/main/output/results.png)
 
-- Graphiques interactifs par année disponibles dans l'interface Flask (chargés depuis sentiments_par_annee.json)
-- Graphiques interactifs par semestre disponibles dans l'interface Flask (chargés depuis sentiments_par_semestre.json)
+- Interactive charts by year available in the Flask interface (loaded from sentiments_by_year.json)
+- Interactive charts by semester available in the Flask interface (loaded from sentiments_par_semestre.json)
 
 
-## 📈 Fonctionnalités de l'interface web
+## 📈 Web Interface Features
 
-- Visualisation globale de la répartition des sentiments
-- Graphiques interactifs par année et semestre
-- Affichage dynamique avec Chart.js
-- Navigation fluide et design épuré
-- Interface responsive et épurée
+- Global sentiment distribution visualization
+- Interactive charts by year and semester
+- Dynamic display using Chart.js
+- Smooth navigation and clean design
+- Responsive and minimalist interface
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis-Spark-NLP/blob/main/src/webapp/images/Interface-Web1.png)
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis-Spark-NLP/blob/main/src/webapp/images/Interface-Web2.png)
 
 
-## 🚀 Améliorations futures
+## 🚀 Future Improvements
 
-- Ajout de nouvelles sources de données (questionnaires, forums, etc.)
-- Génération automatique de recommandations pédagogiques
-- Système d'authentification pour un accès personnalisé
+- Add new data sources (surveys, forums, etc.)
+- Automatically generate educational recommendations
+- Implement an authentication system for personalized access
 
