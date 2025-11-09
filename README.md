@@ -10,6 +10,7 @@ This project performs **sentiment analysis** on reviews from MP2L Master’s stu
 - Visualize the distribution of sentiments globally, by semester, and by year
 - Provide an **interactive web interface** to dynamically explore the results
 
+---
 
 ## 🔧 Technologies Used
 
@@ -26,6 +27,7 @@ This project performs **sentiment analysis** on reviews from MP2L Master’s stu
   - `json`
   - `pathlib`
 |
+---
 
 ## 📂 Project Structure
 
@@ -51,6 +53,7 @@ sentiment-analysis-spark/
 │ └── sentiments_par_semestre.json   # Data by semester (for the web interface)
 └── README.md
  ``` 
+---
 
 ## 🚀 How to Run the Project
 
@@ -64,6 +67,7 @@ python src/main.py
 ```bash
 python src/webapp/app.py
 ```
+---
 
 ## 📊 Results
 
@@ -76,6 +80,7 @@ python src/webapp/app.py
 - Interactive charts by year available in the Flask interface (loaded from sentiments_by_year.json)
 - Interactive charts by semester available in the Flask interface (loaded from sentiments_par_semestre.json)
 
+---
 
 ## 📈 Web Interface Features
 
@@ -84,13 +89,21 @@ python src/webapp/app.py
 - Dynamic display using Chart.js
 - Smooth navigation and clean design
 - Responsive and minimalist interface
+
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis-Spark-NLP/blob/main/src/webapp/images/Interface-Web1.png)
 ![Répartition des sentiments](https://github.com/hendhamdi/Sentiment-Analysis-Spark-NLP/blob/main/src/webapp/images/Interface-Web2.png)
 
+---
 
 ## 🚀 Future Improvements
 
 - Add new data sources (surveys, forums, etc.)
 - Automatically generate educational recommendations
 - Implement an authentication system for personalized access
+
+---
+
+## ⚖️ Licence
+
+Ce projet est distribué sous la **licence MIT** — vous êtes libre de le réutiliser à des fins **éducatives ou personnelles**, à condition de citer l’auteure originale.
 
