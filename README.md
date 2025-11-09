@@ -103,7 +103,7 @@ python src/webapp/app.py
 
 ---
 
-## ⚖️ Licence
+## ⚖️ License
 
-Ce projet est distribué sous la **licence MIT** — vous êtes libre de le réutiliser à des fins **éducatives ou personnelles**, à condition de citer l’auteure originale.
+This project is distributed under the **MIT License** — you are free to reuse it for **educational or personal purposes**, provided that the original author is credited.
 
